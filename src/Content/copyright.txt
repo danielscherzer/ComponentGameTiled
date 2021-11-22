@@ -1,0 +1,5 @@
+animated_torch.png: Copyright William.Thompsonj downloaded from https://opengameart.org/content/lpc-animated-torch
+BombExploding.png: Copyright Hyptosis and Zabin CC BY 3.0 https://opengameart.org/content/lots-of-free-2d-tiles-and-sprites-by-hyptosis
+goblin_0.png: Copyright Stephen "Redshrike" Challener as graphic artist and William.Thompsonj as contributor. https://opengameart.org/content/lpc-goblin
+grass.png: Copyright Viktor Hahn (Viktor.Hahn@web.de), is licensed under the Creative Commons Attribution 4.0 https://opengameart.org/content/terrain-tileset
+Tree Set_0.png: Copyright 2017 - Rayane Félix. This work is licensed under Creative Commons Attribution-ShareAlike 3.0 Unported. https://opengameart.org/content/tiny-treeset

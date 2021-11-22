@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Example</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;SOLUTION</DefineConstants>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="Content\animated_torch.png" />
+    <EmbeddedResource Include="Content\animated_torch.tsx" />
+    <EmbeddedResource Include="Content\BombExploding.png" />
+    <EmbeddedResource Include="Content\BombExploding.tsx" />
+    <EmbeddedResource Include="Content\goblin_0.png" />
+    <EmbeddedResource Include="Content\goblin_0.tsx" />
+    <EmbeddedResource Include="Content\grass.png" />
+    <EmbeddedResource Include="Content\grass.tsx" />
+    <EmbeddedResource Include="Content\level.tmx" />
+    <EmbeddedResource Include="Content\Tree Set_0.png" />
+    <EmbeddedResource Include="Content\trees.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TiledLib" Version="3.2.0" />
+    <PackageReference Include="Zenseless.OpenTK" Version="0.1.31" />
+    <PackageReference Include="Zenseless.Resources" Version="0.1.9" />
+  </ItemGroup>
+
+</Project>
