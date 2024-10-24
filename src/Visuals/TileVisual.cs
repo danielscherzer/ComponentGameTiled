@@ -1,24 +1,13 @@
 ﻿using Example.Core;
 
-namespace Example.Visuals
+namespace Example.Visuals;
+
+internal class TileVisual(GameObject gameObject, uint tileId, TileRenderer tileRenderer) : IOnDraw
 {
-	internal class TileVisual : IOnDraw
+	public uint TileId { get; } = tileId;
+
+	public virtual void Draw(float deltaTime)
 	{
-		public TileVisual(GameObject gameObject, uint tileId, TileRenderer tileRenderer)
-		{
-			this.gameObject = gameObject;
-			TileId = tileId;
-			this.tileRenderer = tileRenderer;
-		}
-
-		public uint TileId { get; }
-
-		public virtual void Draw(float deltaTime)
-		{
-			tileRenderer.Draw(TileId, gameObject.Bounds);
-		}
-
-		private readonly GameObject gameObject;
-		private readonly TileRenderer tileRenderer;
+		tileRenderer.Draw(TileId, gameObject.Bounds);
 	}
 }

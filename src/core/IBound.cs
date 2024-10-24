@@ -1,9 +1,8 @@
 ﻿using OpenTK.Mathematics;
 
-namespace Example.Core
+namespace Example.Core;
+
+internal interface IBound
 {
-	internal interface IBound
-	{
-		Box2 Bounds { get; }
-	}
+	Box2 Bounds { get; }
 }

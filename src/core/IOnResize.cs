@@ -1,7 +1,6 @@
-﻿namespace Example.Core
+﻿namespace Example.Core;
+
+internal interface IOnResize : IComponent
 {
-	internal interface IOnResize : IComponent
-	{
-		void Resize(int width, int height);
-	}
+	void Resize(int width, int height);
 }

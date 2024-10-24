@@ -1,8 +1,7 @@
-﻿namespace Example.Core
-{
-	public interface IOnUpdate : IComponent
-	{
-		void Update(float deltaTime);
+﻿namespace Example.Core;
 
-	}
+public interface IOnUpdate : IComponent
+{
+	void Update(float deltaTime);
+
 }

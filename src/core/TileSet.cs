@@ -1,30 +1,21 @@
 ﻿using System.Collections.Generic;
 using Zenseless.OpenTK;
 
-namespace Example.Core
+namespace Example.Core;
+
+public class TileSet(string imageName, Texture2D texture, float tileWidth, float tileHeight)
 {
-	public class TileSet
+	public IReadOnlyList<Animation> Animations => animations;
+
+	public string ImageName { get; } = imageName;
+	public Texture2D Texture { get; } = texture;
+	public float TileWidth { get; } = tileWidth;
+	public float TileHeight { get; } = tileHeight;
+
+	internal void AddAnimation(Animation animation)
 	{
-		public TileSet(string imageName, Texture2D texture, float tileWidth, float tileHeight)
-		{
-			ImageName = imageName;
-			Texture = texture;
-			TileWidth = tileWidth;
-			TileHeight = tileHeight;
-		}
-
-		public IReadOnlyList<Animation> Animations => animations;
-
-		public string ImageName { get; }
-		public Texture2D Texture { get; }
-		public float TileWidth { get; }
-		public float TileHeight { get; }
-
-		internal void AddAnimation(Animation animation)
-		{
-			animations.Add(animation);
-		}
-
-		private readonly List<Animation> animations = new();
+		animations.Add(animation);
 	}
+
+	private readonly List<Animation> animations = [];
 }

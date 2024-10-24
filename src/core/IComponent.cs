@@ -1,7 +1,6 @@
-﻿namespace Example.Core
+﻿namespace Example.Core;
+
+public interface IComponent
 {
-	public interface IComponent
-	{
-		//		GameObject GameObject { get; }
-	}
+	//		GameObject GameObject { get; }
 }

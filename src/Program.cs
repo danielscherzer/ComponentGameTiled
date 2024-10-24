@@ -1,13 +1,13 @@
 using Example;
 using Example.Core;
-using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using Zenseless.OpenTK;
 using Zenseless.Resources;
 
-var window = new GameWindow(GameWindowSettings.Default, new NativeWindowSettings { Profile = ContextProfile.Compatability });
-window.Title = "Exercise Tiled";
+var window = new GameWindow(GameWindowSettings.Default, ImmediateMode.NativeWindowSettings);
 window.KeyDown += args => { if (Keys.Escape == args.Key) window.Close(); };
+window.Title = "Exercise Tiled";
 
 EmbeddedResourceDirectory resourceDirectory = new(nameof(Example) + ".Content");
 Input input = new(window);
@@ -30,6 +30,7 @@ window.Resize += args =>
 		resizeComponent.Resize(args.Width, args.Height);
 	}
 };
+
 window.UpdateFrame += args => scene.Update((float)args.Time);
 
 window.Run();

@@ -1,7 +1,6 @@
-﻿namespace Example.Core
+﻿namespace Example.Core;
+
+internal interface IOnDraw : IComponent
 {
-	internal interface IOnDraw : IComponent
-	{
-		void Draw(float deltaTime);
-	}
+	void Draw(float deltaTime);
 }

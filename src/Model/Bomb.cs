@@ -5,20 +5,12 @@ using Zenseless.OpenTK;
 
 namespace Example.Model
 {
-	internal class Bomb : IOnUpdate
+	internal class Bomb(GameObject goBomb, GameObject goPlayer, Scene scene) : IOnUpdate
 	{
-		private readonly GameObject goBomb;
-		private readonly Player player;
-		private readonly Scene scene;
+		private readonly Player player = goPlayer.Components.OfType<Player>().FirstOrDefault() ?? throw new ArgumentException($"GameObject {nameof(goPlayer)} has no component of type Player");
+
 		public delegate void ExplosionHandler();
 		public event ExplosionHandler? ExplosionStarts;
-
-		public Bomb(GameObject goBomb, GameObject goPlayer, Scene scene)
-		{
-			this.goBomb = goBomb;
-			player = goPlayer.Components.OfType<Player>().FirstOrDefault() ?? throw new ArgumentException($"GameObject {nameof(goPlayer)} has no component of type Player");
-			this.scene = scene;
-		}
 
 		private void StartExplosion()
 		{
